@@ -28,10 +28,17 @@ export default function WalletConnect() {
 
   async function connect() {
     try {
+      console.log('Attempting to connect...');
       await activate(injected);
+      console.log('Connection successful');
     } catch (error) {
       console.error('Error connecting:', error);
     }
+    // try {
+    //   await activate(injected);
+    // } catch (error) {
+    //   console.error('Error connecting:', error);
+    // }
   }
 
   async function disconnect() {
