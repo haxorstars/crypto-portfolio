@@ -3,7 +3,7 @@ export default {
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "esm",
   serverBuildTarget: "vercel",
-  server: process.env.NODE_ENV === "development" ? undefined : "./api/index.js",
+  server: "./api/index.js",
   future: {
     v2_dev: true,
     v2_errorBoundary: true,
