@@ -5,5 +5,3 @@
   "devCommand": "npm run dev",
   "outputDirectory": "public"
 }
-  "devCommand": "npm run dev"
-}
