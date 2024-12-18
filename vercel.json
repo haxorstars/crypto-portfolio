@@ -1,5 +1,6 @@
 {
-    "buildCommand": "remix build",
-    "framework": "remix",
-    "devCommand": "remix dev"
-  }
+  "buildCommand": "npm run build",
+  "framework": "remix",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev"
+}
