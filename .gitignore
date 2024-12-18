@@ -24,5 +24,3 @@ logs
 coverage
 
 .npm
-
-.eslintcache

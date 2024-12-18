@@ -2,9 +2,3 @@
   command = "npm run build"
   publish = "public"
   functions = "netlify/functions"
-
-[[redirects]]
-  from = "/index"
-  to = "/"
-  status = 200
-  force = true
