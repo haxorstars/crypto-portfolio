@@ -1,7 +1,18 @@
 {
   "buildCommand": "npm run build",
-  "framework": "remix",
+  "framework": null,
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "outputDirectory": "public"
+  "builds": [
+    {
+      "src": "./api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "./api/index.js"
+    }
+  ]
 }
