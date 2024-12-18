@@ -1,18 +1,19 @@
 const { createRequestHandler } = require('@remix-run/netlify');
 
 exports.handler = async (event, context) => {
-  const loadContext = getLoadContext(event);
+  const request = event;
+  const { createRequestHandler } = require('@remix-run/netlify');
 
-  return createRequestHandler({
-    getLoadContext: () => loadContext,
-  })(event, context);
+  try {
+    return await createRequestHandler({
+      getLoadContext() {
+        // Return any additional context for your app here
+      },
+    })(request, context);
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: `Error: ${err.message}`,
+    };
+  }
 };
-
-function getLoadContext(event) {
-  const headers = event.headers || {};
-  const userAgent = headers['user-agent'] || 'unknown';
-
-  return {
-    userAgent,
-  };
-}
