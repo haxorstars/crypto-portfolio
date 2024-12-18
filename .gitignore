@@ -1,13 +1,8 @@
 node_modules
 
 /.cache
-/public/build
 .env
 .env.local
-
-!/build/
-!/build/index.js
-!/build/manifest.json
 
 .DS_Store
 .idea
@@ -31,5 +26,3 @@ coverage
 .npm
 
 .eslintcache
-
-!.vercel
