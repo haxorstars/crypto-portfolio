@@ -2,6 +2,11 @@
   "buildCommand": "npm run build",
   "framework": "remix",
   "installCommand": "npm install",
+<<<<<<< HEAD
   "devCommand": "npm run dev",
   "outputDirectory": "public"
 }
+=======
+  "devCommand": "npm run dev"
+}
+>>>>>>> 8bce59bb5f3d336a21c69e2106eead73b59a0777
