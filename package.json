@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@ethersproject/providers": "^5.7.2",
+        "@remix-run/netlify": "^1.19.3",
         "@remix-run/node": "^2.4.0",
         "@remix-run/react": "^2.4.0",
         "@remix-run/serve": "^2.4.0",

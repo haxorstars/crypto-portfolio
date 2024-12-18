@@ -31,21 +31,6 @@ var require_web3 = __commonJS({
   }
 });
 
-// api/index.js
-import { createRequestHandler } from "@remix-run/vercel";
-
-// server-entry-module:@remix-run/dev/server-build
-var server_build_exports = {};
-__export(server_build_exports, {
-  assets: () => assets_manifest_default,
-  assetsBuildDirectory: () => assetsBuildDirectory,
-  entry: () => entry,
-  future: () => future,
-  mode: () => mode,
-  publicPath: () => publicPath,
-  routes: () => routes
-});
-
 // app/entry.server.tsx
 var entry_server_exports = {};
 __export(entry_server_exports, {
@@ -399,9 +384,12 @@ var mode = "production", assetsBuildDirectory = "public\\build", future = { v3_f
     module: index_exports
   }
 };
-
-// api/index.js
-var api_default = createRequestHandler({ build: server_build_exports, mode: "production" });
 export {
-  api_default as default
+  assets_manifest_default as assets,
+  assetsBuildDirectory,
+  entry,
+  future,
+  mode,
+  publicPath,
+  routes
 };
