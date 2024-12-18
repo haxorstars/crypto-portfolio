@@ -2,15 +2,18 @@ const { createRequestHandler } = require('@remix-run/netlify');
 
 exports.handler = async (event, context) => {
   const request = event;
-  const { createRequestHandler } = require('@remix-run/netlify');
-
+  console.log("Handling request:", request); // Log permintaan yang diterima
+  
   try {
-    return await createRequestHandler({
+    const handler = createRequestHandler({
       getLoadContext() {
-        // Return any additional context for your app here
+        // Konteks tambahan jika diperlukan
       },
-    })(request, context);
+    });
+    
+    return await handler(request, context);
   } catch (err) {
+    console.error("Handler error:", err);  // Log error untuk debugging
     return {
       statusCode: 500,
       body: `Error: ${err.message}`,
