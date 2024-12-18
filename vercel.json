@@ -1,0 +1,5 @@
+{
+    "buildCommand": "remix build",
+    "framework": "remix",
+    "devCommand": "remix dev"
+  }
