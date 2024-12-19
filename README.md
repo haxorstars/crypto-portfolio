@@ -1,4 +1,4 @@
-# Welcome to Remix!
+# Im Using RemixJS
 
 - 📖 [Remix docs](https://remix.run/docs)
 
