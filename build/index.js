@@ -139,7 +139,7 @@ import {
 } from "@remix-run/react";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-MBRQQ4NF.css";
+var tailwind_default = "/crypto-portfolio/build/_assets/tailwind-MBRQQ4NF.css";
 
 // app/root.tsx
 import { jsx as jsx2, jsxs } from "react/jsx-runtime";
@@ -363,10 +363,10 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-K3VB5LFX.js", imports: ["/build/_shared/chunk-HWOM3YKI.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-ABJHFDQR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-HLWSF2MO.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "3f82c2d6", hmr: void 0, url: "/build/manifest-3F82C2D6.js" };
+var assets_manifest_default = { entry: { module: "/crypto-portfolio/build/entry.client-KSK3WKQZ.js", imports: ["/crypto-portfolio/build/_shared/chunk-372FNWUZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/crypto-portfolio/build/root-Z75GKA43.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/crypto-portfolio/build/routes/_index-BXVNBVPX.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "8d570786", hmr: void 0, url: "/crypto-portfolio/build/manifest-8D570786.js" };
 
 // server-entry-module:@remix-run/dev/server-build
-var mode = "production", assetsBuildDirectory = "public\\build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
+var mode = "production", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/crypto-portfolio/build/", entry = { module: entry_server_exports }, routes = {
   root: {
     id: "root",
     parentId: void 0,
