@@ -8,7 +8,7 @@
         "dev": "remix dev",
         "start": "remix-serve build",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d public"
+        "deploy": "gh-pages -d public -b gh-pages -m 'Deploy to GitHub Pages'"
     },
     "dependencies": {
         "@ethersproject/providers": "^5.7.2",
