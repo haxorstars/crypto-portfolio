@@ -127,15 +127,18 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
 var root_exports = {};
 __export(root_exports, {
   default: () => App,
-  links: () => links
+  links: () => links,
+  loader: () => loader
 });
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  useLoaderData
 } from "@remix-run/react";
 
 // app/styles/tailwind.css
@@ -145,8 +148,11 @@ var tailwind_default = "/crypto-portfolio/build/_assets/tailwind-MBRQQ4NF.css";
 import { jsx as jsx2, jsxs } from "react/jsx-runtime";
 var links = () => [
   { rel: "stylesheet", href: tailwind_default }
-];
+], loader = () => json({
+  baseUrl: "/crypto-portfolio"
+});
 function App() {
+  let { baseUrl } = useLoaderData();
   return /* @__PURE__ */ jsxs("html", { lang: "en", children: [
     /* @__PURE__ */ jsxs("head", { children: [
       /* @__PURE__ */ jsx2("meta", { charSet: "utf-8" }),
@@ -167,10 +173,10 @@ function App() {
 var index_exports = {};
 __export(index_exports, {
   default: () => Index,
-  loader: () => loader
+  loader: () => loader2
 });
-import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { json as json2 } from "@remix-run/node";
+import { useLoaderData as useLoaderData2 } from "@remix-run/react";
 
 // app/components/Web3Provider.tsx
 import { Web3ReactProvider } from "@web3-react/core";
@@ -268,20 +274,20 @@ function WalletConnect() {
 
 // app/routes/_index.tsx
 import { jsx as jsx5, jsxs as jsxs3 } from "react/jsx-runtime";
-var loader = async () => {
+var loader2 = async () => {
   try {
     let prices = await (await fetch(
       "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd"
     )).json(), trending = await (await fetch(
       "https://api.coingecko.com/api/v3/search/trending"
     )).json();
-    return json({
+    return json2({
       prices,
       trending,
       error: null
     });
   } catch {
-    return json({
+    return json2({
       prices: {
         bitcoin: { usd: 0 },
         ethereum: { usd: 0 }
@@ -292,7 +298,7 @@ var loader = async () => {
   }
 };
 function Index() {
-  let { prices, trending, error } = useLoaderData();
+  let { prices, trending, error } = useLoaderData2();
   return /* @__PURE__ */ jsx5("div", { className: "min-h-screen bg-gray-100", children: /* @__PURE__ */ jsxs3("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8", children: [
     /* @__PURE__ */ jsxs3("div", { className: "bg-white rounded-lg shadow-lg p-6 mb-8", children: [
       /* @__PURE__ */ jsx5("h1", { className: "text-3xl font-bold text-gray-900", children: "Crypto Portfolio Tracker" }),
@@ -363,7 +369,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/crypto-portfolio/build/entry.client-KSK3WKQZ.js", imports: ["/crypto-portfolio/build/_shared/chunk-372FNWUZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/crypto-portfolio/build/root-Z75GKA43.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/crypto-portfolio/build/routes/_index-BXVNBVPX.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "8d570786", hmr: void 0, url: "/crypto-portfolio/build/manifest-8D570786.js" };
+var assets_manifest_default = { entry: { module: "/crypto-portfolio/build/entry.client-KSK3WKQZ.js", imports: ["/crypto-portfolio/build/_shared/chunk-372FNWUZ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/crypto-portfolio/build/root-PLGRBZUO.js", imports: ["/crypto-portfolio/build/_shared/chunk-22P5643L.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/crypto-portfolio/build/routes/_index-QHJPZ24M.js", imports: void 0, hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "28229e88", hmr: void 0, url: "/crypto-portfolio/build/manifest-28229E88.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "production", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/crypto-portfolio/build/", entry = { module: entry_server_exports }, routes = {
