@@ -4,7 +4,6 @@ export default {
   serverModuleFormat: "esm",
   publicPath: "/crypto-portfolio/build/",
   assetsBuildDirectory: "public/build",
-  baseUrl: "/crypto-portfolio",
   future: {
     v2_dev: true,
   },
